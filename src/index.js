@@ -10,7 +10,7 @@ export default class Storage {
       $.get({
         key: `${this._prefix}_${key}`,
         success(data) {
-          if (opts && opts.toJson) {
+          if (data && opts && opts.toJson) {
             try {
               let d = JSON.parse(data);
               data = d;
